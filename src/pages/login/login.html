@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>登录</h1>
+    <form LoginForm="ngForm">
+         <div class="form-group">
+            <label for="userName">
+                用户名
+            </label>
+            <input type='text' name='userName' placeholder="请输入用户名" class="form-control" required  [(ngModel)]="userName" minlength="6" >
+          
+         </div>
+         <div class="form-group">
+            <label for="userPassword">
+                密码
+            </label>
+            <input type='password' name='userPassword' placeholder="请输入密码" class="form-control" required  [(ngModel)]="userPassword" minlength="8">
+         </div>
+        
+         <button (click)='login()' class="btn btn-success" >登录</button>
+         
+    </form>
+</div>
