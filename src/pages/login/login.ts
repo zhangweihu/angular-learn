@@ -18,7 +18,7 @@ export class LoginComponent{
            const options = {
                  'Content-Type': 'application/x-www-form-urlencoded'
             };
-            const testtUrl='http://ab.91o3.com.cn/api/indexData';
+            const testtUrl='';
             this.http.Http(testtUrl,options).subscribe(
                   data=>{
                       console.log(data);
