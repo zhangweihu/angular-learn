@@ -19,7 +19,7 @@ export class LoginComponent{
                  'Content-Type': 'application/x-www-form-urlencoded'
             };
             const testtUrl='';
-            this.http.Http(testtUrl,options).subscribe(
+            this.http.HttpGet(testtUrl,options).subscribe(
                   data=>{
                       console.log(data);
                   },

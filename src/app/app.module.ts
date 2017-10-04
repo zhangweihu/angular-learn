@@ -8,13 +8,14 @@ import { AppComponent } from './app.component';
 import {LoginComponent} from '../pages/login/login';
 import {HomeComponent} from '../pages/home/home';
 import {NoFoundComponent} from '../pages/nofound/nofound';
-
+import {HeaderDemoComponent} from '../components/header/header';
 @NgModule({
-  declarations: [    //此处引入指令，组建，管道--》此处的都会被@NgModule元数据独有
+  declarations: [    //此处引入指令，组件，管道--》此处的都会被@NgModule元数据独有
     AppComponent,
     LoginComponent,
     HomeComponent,
-    NoFoundComponent
+    NoFoundComponent,
+    HeaderDemoComponent  //组件头部
   ],
   imports: [   //引入特性模块
     BrowserModule, //浏览器所需

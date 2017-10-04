@@ -17,12 +17,12 @@ export class HttpService{
    * @param options
    * @param err
    */
-    public Http(url: string,options: Object):Observable<any>{
+    public HttpGet(url: string,options: Object):Observable<any>{
              return this._http.get(url,options)
              .map(res=>res.json() )
              .catch((error:any)=>Observable.throw(error.json().error||'Server error'));
     }
-   
+
 }
 
 
