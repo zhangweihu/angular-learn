@@ -15,13 +15,24 @@ export class HttpService{
    * get请求
    * @param url
    * @param options
-   * @param err
+   *
    */
     public HttpGet(url: string,options: Object):Observable<any>{
              return this._http.get(url,options)
              .map(res=>res.json() )
              .catch((error:any)=>Observable.throw(error.json().error||'Server error'));
     }
+     /**
+   * post请求
+   * @param url
+   * @param options
+   * @param body
+   */
+  public HttpPost(url: string,options: Object,body:Object):Observable<any>{
+    return this._http.post(url,options,body)
+    .map(res=>res.json() )
+    .catch((error:any)=>Observable.throw(error.json().error||'Server error'));
+}
 
 }
 
