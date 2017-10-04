@@ -1,3 +1,12 @@
-<div>
-    侧边栏
+<div class="sidebarContainer">
+    <div>
+        <ul >
+            <li *ngFor='let item of Menu'>
+                 {{item.name}}
+                  <ul *ngIf='item.menu'>
+                      <li *ngFor='let i of item.menu'> {{i.name}}</li>
+                  </ul>
+            </li>
+        </ul>
+    </div>
 </div>

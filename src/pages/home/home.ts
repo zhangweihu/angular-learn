@@ -7,6 +7,7 @@ import {User} from '../../common/user';
 })
 export class HomeComponent{
     public  user:User;
+    public  menuList:Array<any>;
     constructor(){
            this.user={
             sex: 'male',
@@ -15,6 +16,13 @@ export class HomeComponent{
             userMobile: 12345678901,
             userPassword:'qwewqewqeq'
            };
+           this.menuList=[
+               {'name':'knowledge','menu':[{'name':'MR.zhang'},{'name':'MR.li'}]},
+               {'name':'power','menu':[{'name':'MR.wang'},{'name':'MR.zhao'}]},
+               {'name':'study','menu':[{'name':'MR.zhou'},{'name':'MR.zhen'}]},
+               {'name':'product'},
+            ];
+            console.log( this.menuList);
     }
     showUserName(e){
         console.log(e.target.innerText);
